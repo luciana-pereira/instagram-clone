@@ -4,14 +4,11 @@
     "es2022": true
   },
   "extends": [
-    "eslint:recommended",
-    "plugin:@typescript-eslint/recommended",
     "plugin:react/recommended",
-    "plugin:eslint-config-prettier",
+    "pluging:@typescript-eslint/recommended",
     "airbnb",
-    "plugin:prettier/recommended",
-    "some-other-config-you-use",
-    "prettier"
+    "prettier/@typescript-eslint",
+    "plugin:prettier/recommended"
   ],
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
@@ -57,6 +54,7 @@
       }
     ],
     "import/prefer-default-export": "off",
+    "@typescript-eslint/no-use-before-define": ["error"],
     "prettier/prettier": "error",
     "import/extensions": [
       "error",
