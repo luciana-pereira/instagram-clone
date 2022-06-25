@@ -1,0 +1,16 @@
+div#root {
+  height: 100%;
+  background-color: #fafafa;
+}
+
+.image {
+  align-self: center;
+  background-position: -46px 0;
+  background-size: 468.32px 634.15px;
+  -webkit-flex-basis: 380.32px;
+  -ms-flex-preferred-size: 380.32px;
+  flex-basis: 380.32px;
+  height: 581.15px;
+  margin-bottom: 12px;
+  margin-right: 32px;
+}
