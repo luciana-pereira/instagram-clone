@@ -1,40 +1,19 @@
 import * as React from 'react';
-import Avatar from '@mui/material/Avatar';
-import Button from '@mui/material/Button';
 import CssBaseline from '@mui/material/CssBaseline';
-import TextField from '@mui/material/TextField';
-import FormControlLabel from '@mui/material/FormControlLabel';
-import Checkbox from '@mui/material/Checkbox';
 import Link from '@mui/material/Link';
-import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Typography from '@mui/material/Typography';
 import Container from '@mui/material/Container';
 import { createTheme, ThemeProvider } from '@mui/material/styles';
 import styles from './SignIn.module.css';
-
-function Copyright(props: any) {
-  return (
-    <Typography
-      variant="body2"
-      color="text.secondary"
-      align="center"
-      {...props}
-    >
-      {'Copyright © '}
-      <Link color="inherit" href="https://www.linkedin.com/in/lucianapereiras/">
-        Instagram por Luciana Pereira
-      </Link>{' '}
-      {new Date().getFullYear()}
-      {'.'}
-    </Typography>
-  );
-}
+import Input from '../Forms/Input';
+import Copyright from '../Copyright/Copyright';
+import Button from '../Forms/Button';
 
 const theme = createTheme();
 
 export const SignIn = () => {
+
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -47,8 +26,7 @@ export const SignIn = () => {
   return (
     <ThemeProvider theme={theme}>
       <Container component="main" maxWidth="xs">
-        <CssBaseline />
-        <Box //Estilo container geral rgFsT
+        <Box
           sx={{
             color: 'rgba(var(--i1d,38,38,38),1)',
             marginTop: '12px',
@@ -56,7 +34,7 @@ export const SignIn = () => {
             flexGrow: 1,
           }}
         >
-          <Box //Box2 gr27e
+          <Box
             component="form"
             onSubmit={handleSubmit}
             noValidate
@@ -85,10 +63,10 @@ export const SignIn = () => {
               <h1 className={styles.title}>Instagram</h1>
             </Box>
 
-            <Box //container form epjei
+            <Box
               sx={{
                 marginBottom: '10px',
-                maxWidth: '350px',
+                // maxWidth: '350px',
                 width: '100%',
               }}
             >
@@ -96,7 +74,6 @@ export const SignIn = () => {
                 id="loginForm"
                 method="post"
                 style={{
-                  //form hmkte
                   display: 'flex',
                   flexDirection: 'column',
                 }}
@@ -128,7 +105,14 @@ export const SignIn = () => {
                         width: '100%',
                       }}
                     >
-                      <TextField
+                      <Input
+                        placeholder={'Telefone, nome de usuário ou email'}
+                        type={'text'} name={'username'}
+                        value={undefined}
+                        onChange={() => {}}
+                        error={'Campo obrigatório'}
+                        onBlur={() => {}} />
+                      {/* <TextField
                         margin="normal"
                         required
                         fullWidth
@@ -137,7 +121,7 @@ export const SignIn = () => {
                         name="username"
                         autoComplete="username"
                         autoFocus
-                      />
+                      /> */}
                     </Box>
 
                     <Box
@@ -152,7 +136,16 @@ export const SignIn = () => {
                         width: '100%',
                       }}
                     >
-                      <TextField
+                      <Input
+                        type={'password'}
+                        name={'password'}
+                        value={undefined}
+                        onChange={() => {}}
+                        error={'Campo obrigatório'}
+                        onBlur={() => {}}
+                        placeholder={'Senha*'}
+                      />
+                      {/* <TextField
                         margin="normal"
                         required
                         name="password"
@@ -160,19 +153,17 @@ export const SignIn = () => {
                         type="password"
                         id="password"
                         autoComplete="current-password"
-                      />
-                      <Button type="submit" fullWidth sx={{ mt: 3, mb: 2 }}>
-                        Mostrar
-                      </Button>
+                      /> */}
                     </Box>
-                    <Button
+                    <Button children={'Entrar'} />
+                    {/* <Button
                       type="submit"
                       fullWidth
                       variant="contained"
                       sx={{ mt: 3, mb: 2 }}
                     >
                       Entrar
-                    </Button>
+                    </Button> */}
                   </Box>
                 </Box>
 

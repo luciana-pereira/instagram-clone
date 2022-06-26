@@ -6,30 +6,24 @@ import styles from './LoginScreen.module.css';
 const LoginScreen = () => {
   return (
     <Box
-      sx={{
-        backgroundColor: "#fafafa",
-        flexGrow: 1,
-        order: 4,
-        height: "100%",
-      }}
+    className={styles.loginContainer}
     >
       <Box
-        sx={{
-          display: "flex",
-          flexDirection: "row",
-          flexGrow: 1,
-          justifyContent: "center",
-          margin: "32px auto 0",
-          maxWidth: "935px",
-          paddingBottom: "32px",
-          width: "100%",
-        }}
+        className={styles.loginContent}
       >
-        <img
-          src="https://www.instagram.com/static/images/homepage/phones/home-phones-2x.png/cbc7174b4f05.png"
-          alt="tela de celular com perfil e fotos"
-          className={styles.image}
-        />
+        <Box
+          className={styles.imgContainer}
+        >
+          <Box
+            className={styles.content}
+          >
+            <img
+              src='https://www.instagram.com/static/images/homepage/screenshots/screenshot3.png/94edb770accf.png'
+              className={styles.image}
+            />
+
+          </Box>
+        </Box>
         <SignIn />
       </Box>
     </Box>
