@@ -3,32 +3,40 @@ import styles from './Input.module.css';
 
 interface InputProps {
   // label: string,
-  type: string,
-  name: string
-  value: any,
-  onChange: () => void,
-  error: string,
-  onBlur: () => void,
-  placeholder: string
+  type: string;
+  name: string;
+  value: any;
+  onChange: () => void;
+  onBlur: () => void;
+  label: string;
 }
 
-const Input = ({ type, name, value, onChange, error, onBlur, placeholder }: InputProps) => {
+const Input = ({
+  type,
+  name,
+  value,
+  onChange,
+  onBlur,
+  label,
+}: InputProps) => {
   return (
     <div className={styles.wrapper}>
-      {/* <label htmlFor={name} className={styles.label}>
-        {label}
-      </label> */}
-      <input
-        id={name}
-        name={name}
-        className={styles.input}
-        type={type}
-        value={value}
-        onChange={onChange}
-        onBlur={onBlur}
-        placeholder={placeholder}
-      />
-      {error && <p className={styles.error}>{error}</p>}
+      <label htmlFor={name} className={styles.label}>
+        <span className={styles.span}>
+          {label}
+        </span>
+        <input
+          id={name}
+          name={name}
+          className={styles.input}
+          type={type}
+          value={value}
+          onChange={onChange}
+          onBlur={onBlur}
+          required
+        />
+      </label>
+      <div className={styles.content}></div>
     </div>
   );
 };

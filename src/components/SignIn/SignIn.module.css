@@ -1,13 +1,195 @@
 @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
-.title {
-  font-family: 'Lobster', cursive;
-  text-align: center;
-  margin-top: 12px;
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  font-size: "40rem"; /*12.5rem = a 20px*/
-  font-weight: 700;
-  line-height: "2rem";
 
+div.signInContainer {
+  margin: 0;
+  padding: 0;
+  position: relative;
+  justify-content: center;
+}
+
+.signInContent {
+  margin: 0 0 10px;
+}
+
+.form {
+  align-items: center;
+  background-color: rgba(var(--d87,255,255,255),1);
+  border: 1px solid rgba(var(--b6a,219,219,219),1);
+  border-radius: 1px;
+  margin: 10px 0px 10px 0px;
+  padding: 10px 0;
+}
+
+.logoContainer {
+  display: flex;
+  align-content: stretch;
+  align-items: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin-bottom: 12px;
+  margin-top: 36px;
+  cursor: pointer;
+}
+
+.logo {
+  max-height: 50%;
+  max-width: 50%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.formContainer {
+  margin-bottom: 10px;
+  max-width: 350px;
+  width: 100%;
+}
+
+.formContent {
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  display: flex;
+  align-content: stretch;
+  justify-content: flex-start;
+  flex-direction: column;
+  flex: 0 0 auto;
+  margin-top: 24px;
+}
+
+.inputContent {
+  margin: 0 40px 6px;
+  align-items: center;
+}
+
+.lineContainer {
+  margin: 5px 40px 18px 40px;
+  display: inline-flex;
+}
+
+.line {
+  background: #dbdbdb;
+  flex-grow: 1;
+  flex-shrink: 1;
+  height: 1.5px;
+  position: relative;
+  top: 0.45em;
+}
+
+.or {
+  color: #8e8e8e;
+  -webkit-box-flex: 1;
+  flex-grow: 0;
+  flex-shrink: 0;
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 15px;
+  margin: 0 18px;
+  text-transform: uppercase;
+}
+
+.facebookContainer {
+  margin: 8px 40px;
+  flex: 0 0 auto;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: stretch;
+  align-content: stretch;
+  display: flex;
+  padding: 0;
+  position: relative;
+}
+
+.facebookContent {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  appearance: none;
+  box-sizing: border-box;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+  text-overflow: ellipsis;
+  text-transform: inherit;
+  user-select: none;
+  color: #0095f6;
+  display: inline-block;
+}
+
+.icon {
+  /* background-image: url('../../assets/facebook.png'); */
+  background-repeat: no-repeat;
+  background-position: -414px -259px;
+  height: 16px;
+  width: 16px;
+  margin-right: 8px;
+  position: relative;
+  top: 3px;
+}
+
+span.text {
+  color: #385185;
+  font-size: 12px;
+}
+
+.registerContainer {
+  align-items: center;
+  background-color: #fff;
+  border: 1px solid #dbdbdb;
+  border-radius: 1px;
+  margin: 0px 0px 10px;
+  padding: 10px 0px;
+}
+
+.registerContent {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica,
+    Arial, sans-serif;
+  font-size: 14px;
+  line-height: 18px;
+  margin: -3px 0 -4px;
+  font-weight: 400;
+  color: #8e8e8e;
+  display: block;
+}
+
+.registerText {
+  color: #262626;
+  font-size: 12px;
+  margin: 15px;
+  text-align: center;
+}
+
+.registerLink {
+  font-size: 12px;
+  text-align: center;
+  font-weight: bold;
+  text-decoration: none;
+  color: #0095f6;
+}
+
+.textApp {
+  color: #262626;
+  font-size: 12px;
+  line-height: 18px;
+  margin: 10px 20px 10px 20px;
+  text-align: center;
+}
+
+.logoApp {
+  /* flex-direction: row; */
+  /* justify-content: center; */
+  margin-top: 10px;
+  /* position: relative; */
+    margin-left: 10%;
+    margin-right: -50%;
+    /* transform: translate(-50%, -50%) */
+}
+
+.iconApp {
+  height: 35px;
+  /* margin-right: 10px; */
+  /* margin-left: 20px; */
 }

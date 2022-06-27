@@ -2,6 +2,7 @@ import { Box } from '@mui/material';
 import React from 'react';
 import { SignIn } from '../SignIn/SignIn';
 import styles from './LoginScreen.module.css';
+import Copyright from '../Copyright/Copyright'
 
 const LoginScreen = () => {
   return (
@@ -26,6 +27,7 @@ const LoginScreen = () => {
         </Box>
         <SignIn />
       </Box>
+      <Copyright />
     </Box>
   );
 };
